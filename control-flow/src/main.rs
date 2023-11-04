@@ -1,13 +1,11 @@
 fn main() {
-    let num = 3;
+    let m1 = String::from("Hello");
+    let m2 = String::from("world");
+    greet(&m1, &m2); // note the ampersands
+    let s = format!("{} {}", m1, m2);
+}
 
-    if num == 0 {
-        println!("Did you copy from me?!!?!");
-    } else if num == 100 {
-        println!("Such a topper huh")
-    } else {
-        println!("Maybe we can be friends");
-    }
-
-    //lets resort to using match instead alright?
+fn greet(g1: &String, g2: &String) {
+    // note the ampersands
+    println!("{} {}!", g1, g2);
 }
